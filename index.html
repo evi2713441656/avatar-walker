@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#161815" />
+  <title>MOTION / 角色造型工作室</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="MOTION 角色工作室首页">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>MOTION <small>CHARACTER STUDIO</small></span>
+      </a>
+      <div class="topbar-status"><span class="status-dot" aria-hidden="true"></span><span>自动保存</span></div>
+    </header>
+
+    <main class="workspace">
+      <section class="stage-pane" aria-label="角色预览区">
+        <div class="stage-heading">
+          <div>
+            <p class="eyebrow">CHARACTER 01</p>
+            <h1>今天穿什么？</h1>
+          </div>
+          <span class="stage-tip" id="stateTip">休闲造型</span>
+        </div>
+        <div class="stage" id="stage">
+          <div class="stage-watermark" aria-hidden="true">WALK^ ^</div>
+          <div class="floor-note" aria-hidden="true">MOTION TEST · 3/4 VIEW</div>
+        </div>
+        <div class="stage-controls" aria-label="动画控制">
+          <button class="control-button" id="toggleBtn" type="button" aria-pressed="false">
+            <span class="pause-icon" aria-hidden="true"></span><span class="toggle-label">暂停</span>
+          </button>
+          <label class="speed-row">
+            <span>步速</span>
+            <input type="range" id="speedRange" min="0.2" max="2.5" step="0.05" value="1" aria-label="走路速度" />
+            <span class="speed-val" id="speedVal">1x</span>
+          </label>
+        </div>
+      </section>
+
+      <aside class="panel" aria-label="角色造型设置">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">CUSTOMIZE</p>
+            <h2>角色造型</h2>
+          </div>
+          <span class="look-count">05 项</span>
+        </div>
+        <p class="panel-intro">组合发型、服装和表情，打造你的角色。</p>
+        <div class="actions">
+          <button class="primary-action" id="randomBtn" type="button"><span aria-hidden="true">✦</span> 随机搭配</button>
+          <button class="secondary-action" id="resetBtn" type="button">重置</button>
+        </div>
+        <div id="sections" class="sections"></div>
+        <div class="color-section">
+          <div class="color-group">
+            <div class="color-label"><span>肤色</span><small>SKIN</small></div>
+            <div class="swatch-row" id="skinSwatches"></div>
+          </div>
+          <div class="color-group">
+            <div class="color-label"><span>发色</span><small>HAIR COLOR</small></div>
+            <div class="swatch-row" id="hairSwatches"></div>
+          </div>
+        </div>
+        <footer class="panel-footer"><span class="status-dot" aria-hidden="true"></span>所有修改已保存在本机</footer>
+      </aside>
+    </main>
+  </div>
+  <script type="module" src="app3d.js"></script>
+</body>
+
+</html>

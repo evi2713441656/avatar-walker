@@ -1,0 +1,10 @@
+node_modules/
+*.bak
+*.recovered
+app_recovered.js
+app3d.js
+pose.html
+preview.html
+verify.mjs
+package.json
+package-lock.json

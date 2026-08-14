@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>侧身小人 · 精致版</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <main class="stage-pane">
+      <div class="stage-bar">
+        <span class="stage-title">侧身小人 <em class="badge">3/4 精致版</em></span>
+        <span class="stage-tip" id="stateTip">正在走路</span>
+      </div>
+      <div class="stage" id="stage"></div>
+      <div class="stage-controls">
+        <label class="speed-row">
+          <span>速度</span>
+          <input type="range" id="speedRange" min="0.2" max="2.5" step="0.05" value="1" />
+          <span class="speed-val" id="speedVal">1.0x</span>
+        </label>
+        <button class="primary" id="toggleBtn" type="button">暂停</button>
+      </div>
+    </main>
+
+    <aside class="panel">
+      <header>
+        <h1>衣柜</h1>
+        <p class="sub">点击或拖到小人身上，配置自动保存到本地</p>
+      </header>
+      <div class="actions">
+        <button class="ghost" id="randomBtn" type="button">随机搭配</button>
+      </div>
+      <div id="sections" class="sections"></div>
+      <div class="swatches">
+        <div class="swatch-group">
+          <span>肤色</span>
+          <div class="swatch-row" id="skinSwatches"></div>
+        </div>
+        <div class="swatch-group">
+          <span>发色</span>
+          <div class="swatch-row" id="hairSwatches"></div>
+        </div>
+      </div>
+      <footer class="hint">与正身版互不影响，各存各的配置</footer>
+    </aside>
+  </div>
+  <script src="app2.js"></script>
+</body>
+
+</html>
